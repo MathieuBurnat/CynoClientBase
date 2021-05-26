@@ -12,14 +12,26 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="ch.leytto.cynoclient.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:id="@+id/nav_reports"
+        android:name="ch.leytto.cynoclient.ui.report.ReportFragment"
+        android:label="@string/menu_reports"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_customers"
         android:name="ch.leytto.cynoclient.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_customers"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_dogs"
+        android:name="ch.leytto.cynoclient.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_dogs"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="ch.leytto.cynoclient.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_settings"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
