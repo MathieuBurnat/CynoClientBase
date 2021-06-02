@@ -12,6 +12,8 @@
     <string name="menu_customers">Client</string>
     <string name="menu_dogs">Chien</string>
     <string name="menu_settings">Paramètre</string>
+    <string name="menu_localities">Localité</string>
+    <string name="menu_services">Service</string>
     <string name="light_mode">Mode Jour</string>
     <string name="dark_mode">Mode Nuit</string>
     <string name="content_description_light_mode">Changer vers le mode jour</string>
