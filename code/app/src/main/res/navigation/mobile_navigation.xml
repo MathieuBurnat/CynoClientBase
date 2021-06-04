@@ -12,14 +12,40 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="ch.leytto.cynoclient.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_reports"
+        android:name="ch.leytto.cynoclient.ui.report.LocalityFragment"
+        android:label="@string/menu_reports"
+        tools:layout="@layout/fragment_report" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="ch.leytto.cynoclient.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_customers"
+        android:name="ch.leytto.cynoclient.ui.customer.CustomerFragment"
+        android:label="@string/menu_customers"
+        tools:layout="@layout/fragment_customer" />
+
+    <fragment
+        android:id="@+id/nav_dogs"
+        android:name="ch.leytto.cynoclient.ui.dog.DogFragment"
+        android:label="@string/menu_dogs"
+        tools:layout="@layout/fragment_dog" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="ch.leytto.cynoclient.ui.setting.SettingFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/nav_localities"
+        android:name="ch.leytto.cynoclient.ui.setting.SettingFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="ch.leytto.cynoclient.ui.setting.SettingFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_setting" />
+
+
 </navigation>
