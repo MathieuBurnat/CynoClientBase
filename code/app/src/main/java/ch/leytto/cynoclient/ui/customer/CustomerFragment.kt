@@ -21,8 +21,8 @@ class CustomerFragment : Fragment() {
     ): View? {
         reportViewModel =
                 ViewModelProvider(this).get(CustomerViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_report, container, false)
-        val textView: TextView = root.findViewById(R.id.text_report)
+        val root = inflater.inflate(R.layout.fragment_customer, container, false)
+        val textView: TextView = root.findViewById(R.id.text_customer)
         reportViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })

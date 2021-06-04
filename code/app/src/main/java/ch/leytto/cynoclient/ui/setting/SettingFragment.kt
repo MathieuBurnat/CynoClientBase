@@ -21,8 +21,8 @@ class SettingFragment : Fragment() {
     ): View? {
         reportViewModel =
                 ViewModelProvider(this).get(SettingViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_report, container, false)
-        val textView: TextView = root.findViewById(R.id.text_report)
+        val root = inflater.inflate(R.layout.fragment_setting, container, false)
+        val textView: TextView = root.findViewById(R.id.text_setting)
         reportViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })

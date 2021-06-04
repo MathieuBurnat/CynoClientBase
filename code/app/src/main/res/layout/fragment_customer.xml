@@ -7,7 +7,7 @@
     tools:context=".ui.customer.CustomerFragment">
 
     <TextView
-        android:id="@+id/text_report"
+        android:id="@+id/text_customer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
