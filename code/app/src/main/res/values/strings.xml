@@ -19,5 +19,5 @@
     <string name="dark_mode">Mode Nuit</string>
     <string name="content_description_light_mode">Changer vers le mode jour</string>
     <string name="content_description_dark_mode">Changer vers le mode nuit</string>
-    <string name="dog_title_value">Hello there !</string>
+    <string name="client_title">Clients</string>
 </resources>
