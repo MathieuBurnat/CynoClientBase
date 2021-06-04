@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/nav_reports"
-        android:name="ch.leytto.cynoclient.ui.report.LocalityFragment"
+        android:name="ch.leytto.cynoclient.ui.report.ReportFragment"
         android:label="@string/menu_reports"
         tools:layout="@layout/fragment_report" />
 
@@ -30,20 +30,14 @@
         tools:layout="@layout/fragment_dog" />
 
     <fragment
-        android:id="@+id/nav_settings"
-        android:name="ch.leytto.cynoclient.ui.setting.SettingFragment"
-        android:label="@string/menu_settings"
-        tools:layout="@layout/fragment_setting" />
-
-    <fragment
         android:id="@+id/nav_localities"
-        android:name="ch.leytto.cynoclient.ui.setting.SettingFragment"
+        android:name="ch.leytto.cynoclient.ui.locality.LocalityFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_setting" />
 
     <fragment
         android:id="@+id/nav_services"
-        android:name="ch.leytto.cynoclient.ui.setting.SettingFragment"
+        android:name="ch.leytto.cynoclient.ui.service.ServiceFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_setting" />
 
