@@ -32,7 +32,7 @@
         tools:layout_editor_absoluteY="193dp" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/dogDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -132,7 +132,7 @@
         tools:layout_editor_absoluteY="483dp" />
 
     <EditText
-        android:id="@+id/DogColor"
+        android:id="@+id/dogColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

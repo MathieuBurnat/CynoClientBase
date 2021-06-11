@@ -21,9 +21,18 @@ class DogListAdapter : ListAdapter<Dog, DogListAdapter.DogViewHolder>(DogsCompar
 
     class DogViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val nameItemView: TextView = itemView.findViewById(R.id.name)
+        private val dogName: TextView = itemView.findViewById(R.id.dogName)
+        private val dogDate: TextView = itemView.findViewById(R.id.dogDate)
+        //private val nameItemView: TextView = itemView.findViewById(R.id.name) //radio button
+        //private val nameItemView: TextView = itemView.findViewById(R.id.name) //radio button
+        //private val nameItemView: TextView = itemView.findViewById(R.id.name) //radio button
+        private val dogColor: TextView = itemView.findViewById(R.id.dogColor)
 
         fun bind(dog: Dog?) {
-            nameItemView.text = dog?.noun //+ " " + dog?.lastname
+            nameItemView.text = dog?.noun //+ " " + dog?.lastnamey
+            dogName.text = dog?.noun
+            dogDate.text = dog?.birthdate
+            dogColor.text = dog?.color
         }
 
         companion object {
