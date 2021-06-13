@@ -25,7 +25,7 @@ class CustomerFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val root = inflater.inflate(R.layout.fragment_customer, container, false)
 
         val recyclerView = root.findViewById<RecyclerView>(R.id.client_recyclerview)
         val adapter = ClientListAdapter()
