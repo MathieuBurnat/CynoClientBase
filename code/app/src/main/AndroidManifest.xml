@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CynoClient">
         <activity
+            android:name=".DogDetailsActivity"
+            android:label="Voir les détails d'un chien" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.CynoClient.NoActionBar">

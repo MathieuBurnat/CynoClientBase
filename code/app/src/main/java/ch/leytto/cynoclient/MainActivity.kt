@@ -1,12 +1,12 @@
 package ch.leytto.cynoclient
 
-import android.content.SharedPreferences
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -19,7 +19,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
-import androidx.core.view.GravityCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Mode : " + AppCompatDelegate.getDefaultNightMode(), Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -92,5 +92,10 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    fun dogDetail(view: View) {
+        val intent = Intent(this, DogDetailsActivity::class.java)
+        startActivity(intent)
     }
 }
