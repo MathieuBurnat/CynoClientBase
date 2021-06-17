@@ -7,155 +7,74 @@
     tools:context=".ui.customer.CustomerFragment">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/client_detail_name"
+        android:layout_width="69dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="24dp"
         android:text="Nom"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="21dp" />
-
-    <EditText
-        android:id="@+id/dogName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="40dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="100dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/client_detail_genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date de naissance"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="193dp" />
+        android:layout_marginTop="24dp"
+        android:text="Genre"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_name_plain_text"
+        tools:layout_editor_absoluteX="101dp" />
 
     <EditText
-        android:id="@+id/dogDate"
+        android:id="@+id/dog_detail_name_plain_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/client_detail_name"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <EditText
+        android:id="@+id/client_detail_date_plaint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="date"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="212dp" />
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/client_detail_birthday"
+        tools:layout_editor_absoluteX="100dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/client_detail_birthday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Genre"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="98dp" />
+        android:layout_marginTop="12dp"
+        android:text="Date de naissance"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup4"
+        tools:layout_editor_absoluteX="101dp" />
 
     <RadioGroup
-        android:layout_width="182dp"
-        android:layout_height="51dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="124dp">
-
-
-        <RadioButton
-            android:id="@+id/rdbMale"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:text="Male" />
+        android:id="@+id/radioGroup4"
+        android:layout_width="219dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/client_detail_genre"
+        tools:layout_editor_absoluteX="100dp">
 
         <RadioButton
-            android:id="@+id/rdbFemale"
+            android:id="@+id/client_detail_radio_femae"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:text="Femelle" />
+            android:layout_height="wrap_content"
+            android:text="Femme" />
 
+        <RadioButton
+            android:id="@+id/client_detail_radio_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Homme" />
     </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stérile ?"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="275dp" />
-
-    <RadioGroup
-        android:layout_width="183dp"
-        android:layout_height="55dp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="305dp">
-
-        <RadioButton
-            android:id="@+id/rdbYes"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:text="Oui" />
-
-        <RadioButton
-            android:id="@+id/rdbNo"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:text="No" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chimicalement ?"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="381dp" />
-
-    <RadioGroup
-        android:layout_width="183dp"
-        android:layout_height="55dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="411dp">
-
-        <RadioButton
-            android:id="@+id/rdbYesChemical"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:text="Oui" />
-
-        <RadioButton
-            android:id="@+id/rdbNoChemical"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:text="No" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Couleur"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="483dp" />
-
-    <EditText
-        android:id="@+id/dogColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="502dp" />
-
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Race"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="578dp" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Croisée"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="578dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
