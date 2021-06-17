@@ -17,6 +17,9 @@
         android:name=".ClientDetailsActivity"
         android:label="Détails d'un client" />
         <activity
+        android:name=".ReportDetailsActivity"
+        android:label="Détails d'une consultation" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.CynoClient.NoActionBar">

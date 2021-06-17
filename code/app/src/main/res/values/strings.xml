@@ -22,4 +22,5 @@
 
     <string name="client_title">Clients</string>
     <string name="dog_title">Chiens</string>
+    <string name="report_title">Consultations</string>
 </resources>

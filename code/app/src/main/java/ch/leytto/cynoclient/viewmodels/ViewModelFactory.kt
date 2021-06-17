@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import ch.leytto.cynoclient.model.AbstractRepository
 import ch.leytto.cynoclient.model.ClientRepository
 import ch.leytto.cynoclient.model.DogRepository
+import ch.leytto.cynoclient.model.ReportRepository
 import java.lang.IllegalArgumentException
 
 class ViewModelFactory(private val repository: AbstractRepository) : ViewModelProvider.Factory {
@@ -16,6 +17,10 @@ class ViewModelFactory(private val repository: AbstractRepository) : ViewModelPr
         if (modelClass.isAssignableFrom(DogViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
             return DogViewModel(repository as DogRepository) as T
+        }
+        if (modelClass.isAssignableFrom(ReportViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return ReportViewModel(repository as ReportRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
