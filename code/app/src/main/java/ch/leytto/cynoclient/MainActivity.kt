@@ -103,4 +103,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ClientDetailsActivity::class.java)
         startActivity(intent)
     }
+    fun serviceDetail(view: View) {
+        val intent = Intent(this, ServiceDetailsActivity::class.java)
+        startActivity(intent)
+    }
 }
