@@ -8,6 +8,7 @@ import ch.leytto.cynoclient.db.dao.ClientDao
 import ch.leytto.cynoclient.db.dao.DogDao
 import ch.leytto.cynoclient.db.dao.ReportDao
 import ch.leytto.cynoclient.db.dao.ServiceDao
+import ch.leytto.cynoclient.db.dao.LocalityDao
 import ch.leytto.cynoclient.db.entities.*
 import kotlinx.coroutines.CoroutineScope
 
@@ -20,7 +21,7 @@ abstract class CynoClientRoomDatabase : RoomDatabase() {
     abstract fun dogDao(): DogDao
     abstract fun clientDao(): ClientDao
     abstract fun reportDao(): ReportDao
-    //abstract fun localityDao(): LocalityDao
+    abstract fun localityDao(): LocalityDao
     abstract fun serviceDao(): ServiceDao
 
     companion object {

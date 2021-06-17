@@ -22,7 +22,9 @@
         <activity
             android:name=".ServiceDetailsActivity"
             android:label="Détails d'une consultation" />
-
+        <activity
+            android:name=".LocalityDetailsActivity"
+            android:label="Détails d'une consultation" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

@@ -107,4 +107,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ServiceDetailsActivity::class.java)
         startActivity(intent)
     }
+    fun localityDetail(view: View) {
+        val intent = Intent(this, LocalityDetailsActivity::class.java)
+        startActivity(intent)
+    }
 }

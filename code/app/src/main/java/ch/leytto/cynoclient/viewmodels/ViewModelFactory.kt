@@ -23,10 +23,10 @@ class ViewModelFactory(private val repository: AbstractRepository) : ViewModelPr
             @Suppress("UNCHECKED_CAST")
             return ServiceViewModel(repository as ServiceRepository) as T
         }
-        /*if (modelClass.isAssignableFrom(LocalityViewModel::class.java)) {
+        if (modelClass.isAssignableFrom(LocalityViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
             return LocalityViewModel(repository as LocalityRepository) as T
-        }*/
+        }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
