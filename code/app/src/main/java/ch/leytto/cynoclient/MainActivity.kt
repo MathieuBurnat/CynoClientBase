@@ -98,4 +98,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, DogDetailsActivity::class.java)
         startActivity(intent)
     }
+
+    fun clientDetail(view: View) {
+        val intent = Intent(this, ClientDetailsActivity::class.java)
+        startActivity(intent)
+    }
 }
