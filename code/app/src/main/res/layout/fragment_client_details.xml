@@ -4,4 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.customer.CustomerFragment"/>
+    tools:context=".ui.customer.CustomerFragment">
+
+    <TextView
+        android:id="@+id/client_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/client_detail_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="86dp" />
+
+    <TextView
+        android:id="@+id/client_detail_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date de naissance"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="133dp" />
+
+    <TextView
+        android:id="@+id/client_detail_sterile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Est il stérile ?"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <TextView
+        android:id="@+id/client_detail_chimic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Si oui, était-ce chimicalement"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <TextView
+        android:id="@+id/client_detail_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Couleur"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <TextView
+        android:id="@+id/client_detail_breed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Race"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="462dp" />
+
+    <TextView
+        android:id="@+id/client_detail_breed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Croisement"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="469dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
