@@ -6,12 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ch.leytto.cynoclient.CynoClientApplication
 import ch.leytto.cynoclient.R
 import ch.leytto.cynoclient.ServiceListAdapter
-import ch.leytto.cynoclient.ui.service.ServiceViewModel
+import ch.leytto.cynoclient.viewmodels.ServiceViewModel
 import ch.leytto.cynoclient.viewmodels.ViewModelFactory
 
 class ServiceFragment : Fragment() {
