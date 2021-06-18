@@ -5,6 +5,7 @@ import ch.leytto.cynoclient.db.dao.ClientDao
 import ch.leytto.cynoclient.db.dao.DogDao
 import ch.leytto.cynoclient.db.entities.Client
 import ch.leytto.cynoclient.db.entities.Dog
+import ch.leytto.cynoclient.db.entities.relations.ClientWithLocality
 import kotlinx.coroutines.flow.Flow
 
 class ClientRepository(private val clientDao: ClientDao) : AbstractRepository() {
@@ -20,5 +21,12 @@ class ClientRepository(private val clientDao: ClientDao) : AbstractRepository() 
     @WorkerThread
     suspend fun insert(client: Client) {
         clientDao.insert(client)
+    }
+
+    /**
+     * Get all the client data of the given [id] from the dao
+     */
+    fun getById(id: String): ClientWithLocality {
+        return clientDao.getById(id)
     }
 }

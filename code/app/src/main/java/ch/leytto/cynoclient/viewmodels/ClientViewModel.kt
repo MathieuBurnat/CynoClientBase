@@ -7,19 +7,18 @@ import ch.leytto.cynoclient.model.ClientRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.*
 
 class ClientViewModel(private val repository: ClientRepository) : ViewModel() {
 
     val AllClients: LiveData<List<Client>> = repository.allClients.asLiveData()
 
-
-
-    private val _firstname = ("")
-    private val _lastname = ("")
-    private val _email = ("")
-    private val _street = ("")
-    private val _locality = ("")
-    private val _phone = ("")
+    private val _firstname = MutableStateFlow("")
+    private val _lastname = MutableStateFlow("")
+    private val _email = MutableStateFlow("")
+    private val _street = MutableStateFlow("")
+    private val _locality = MutableStateFlow("")
+    private val _phone = MutableStateFlow("")
 
     val isSubmitEnabled: Flow<Boolean> = combine(_firstname, _lastname, _email, _street, _locality) { firstname, lastname, email, street, locality ->
         val isFirstnameCorrect = firstname.length > 2

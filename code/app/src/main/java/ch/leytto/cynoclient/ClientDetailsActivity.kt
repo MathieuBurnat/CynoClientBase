@@ -2,18 +2,18 @@ package ch.leytto.cynoclient
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.EditText
+import android.text.Layout
+import android.widget.LinearLayout
+import android.widget.RadioButton
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
-import ch.leytto.cynoclient.ClientListAdapter
 import ch.leytto.cynoclient.viewmodels.ClientViewModel
 import ch.leytto.cynoclient.viewmodels.ViewModelFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ClientDetailsActivity : AppCompatActivity() {
+class ClientInfoActivity : AppCompatActivity() {
     private val clientViewModel: ClientViewModel by viewModels {
         ViewModelFactory((this.application as CynoClientApplication).clientRepository)
     }
@@ -21,7 +21,6 @@ class ClientDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_client_details)
-
 
         val ref = this
         lifecycleScope.launch(Dispatchers.IO) {
@@ -31,28 +30,28 @@ class ClientDetailsActivity : AppCompatActivity() {
                 title = "Détails de ${clientData.client.firstname} ${clientData.client.lastname}"
 
                 // Firstname
-                findViewById<EditText>(R.id.client_detail_firstname_plain_text).setText(clientData.client.firstname)
+                findViewById<TextView>(R.id.client_detail_firstname_plain_text).text = clientData.client.firstname
 
                 // Lastname
-                findViewById<EditText>(R.id.client_detail_lastname_plain_text).setText(clientData.client.lastname)
+                findViewById<TextView>(R.id.client_detail_lastname_plain_text).text = clientData.client.lastname
 
                 // Email
-                findViewById<EditText>(R.id.client_detail_mail_plain_text).setText(clientData.client.email ?: "Non précisé")
+                findViewById<TextView>(R.id.client_detail_mail_plain_text).text = clientData.client.email ?: "Non précisé"
 
                 // Phone
-                findViewById<EditText>(R.id.client_detail_phone_plain_text).setText(clientData.client.phone)
+                findViewById<TextView>(R.id.client_detail_phone_plain_text).text = clientData.client.phone
 
                 // Street
-                findViewById<EditText>(R.id.client_detail_street_pain_text).setText(clientData.client.street ?: "Non précisée")
+                findViewById<TextView>(R.id.client_detail_street_pain_text).text = clientData.client.street ?: "Non précisée"
 
                 // Locality
-                findViewById<EditText>(R.id.client_detail_locality_pain_text).setText(clientData.locality?.noun ?: "Non précisée")
+                findViewById<TextView>(R.id.client_detail_locality_pain_text).text = clientData.locality?.noun ?: "Non précisée"
 
                 // Gender
                 if (clientData.client.female)
-                    findViewById<EditText>(R.id.client_detail_radio_female).setText("Femme")
+                    findViewById<RadioButton>(R.id.client_detail_radio_female).is
                 else
-                    findViewById<EditText>(R.id.client_detail_radio_male).setText("Homme")
+                    findViewById<RadioButton>(R.id.client_detail_radio_male).ischecked
             }
         }
     }

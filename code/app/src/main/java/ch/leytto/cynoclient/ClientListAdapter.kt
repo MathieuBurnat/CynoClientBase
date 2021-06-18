@@ -3,7 +3,7 @@ package ch.leytto.cynoclient
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -22,10 +22,12 @@ class ClientListAdapter : ListAdapter<Client, ClientListAdapter.ClientViewHolder
 
     class ClientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val nameItemView: TextView = itemView.findViewById(R.id.name)
+        private val buttonDetail: ImageButton = itemView.findViewById(R.id.button_client_details)
         //private val nameDetailItemView: EditText = itemView.findViewById(R.id.client_detail_name_plain_text)
 
         fun bind(client: Client?) {
             nameItemView.text = client?.firstname + " " + client?.lastname
+            buttonDetail.tag = client?.id
             //nameDetailItemView.setText(client?.firstname + " " + client?.lastname, TextView.BufferType.EDITABLE)
         }
 

@@ -14,8 +14,11 @@
             android:name=".DogDetailsActivity"
             android:label="Détails d'un chien" />
         <activity
-            android:name=".ClientDetailsActivity"
+            android:name=".ClientInfoActivity"
             android:label="Détails d'un client" />
+        <activity
+            android:name=".CreateClientActivity"
+            android:label="Création d'un client" />
         <activity
             android:name=".ReportDetailsActivity"
             android:label="Détails d'une consultation" />

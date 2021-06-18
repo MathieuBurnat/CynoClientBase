@@ -41,6 +41,7 @@
             android:id="@+id/fab_option_add_client"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="clientCreateview"
             app:fab_orientation="portrait"
             app:label_text="Add client"
            />
