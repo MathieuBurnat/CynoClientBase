@@ -18,7 +18,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class CreateClientActivity : AppCompatActivity() {
+class ClientCreateActivity : AppCompatActivity() {
     val applicationScope = CoroutineScope(SupervisorJob())
     val database by lazy { CynoClientRoomDatabase.getDatabase(this,applicationScope) }
     val viewModel: ClientViewModel by viewModels {
@@ -78,7 +78,7 @@ class CreateClientActivity : AppCompatActivity() {
             var phone = et_phone.text.toString()
 
             viewModel.insert(Client(0,firstname,lastname,sex,email,phone,street,locality.toInt()))
-            Toast.makeText(this@CreateClientActivity, "L'utilisateur "+et_firstName.text +" "+ et_lastName.text+" a bien été créé.",Toast.LENGTH_LONG).show()
+            Toast.makeText(this@ClientCreateActivity, "L'utilisateur "+et_firstName.text +" "+ et_lastName.text+" a bien été créé.",Toast.LENGTH_LONG).show()
         }
         lifecycleScope.launch {
             viewModel.isSubmitEnabled.collect { value ->

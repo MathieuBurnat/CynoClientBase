@@ -60,4 +60,11 @@ class ClientViewModel(private val repository: ClientRepository) : ViewModel() {
         return repository.getById(id)
     }
 
+    /**
+     * Get all the client information of the given [id]
+     */
+    fun deleteById(id: String) {
+        return repository.deleteById(id)
+    }
+
 }

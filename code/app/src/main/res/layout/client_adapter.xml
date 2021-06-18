@@ -17,11 +17,12 @@
         android:layout_height="match_parent">
 
         <ImageButton
-            android:id="@+id/delete_button"
+            android:id="@+id/button_client_delete"
             android:layout_width="42dp"
             android:layout_height="wrap_content"
             android:background="#00FFFEFE"
             android:tint="#0B0B0B"
+            android:tag=""
             android:onClick="clientDelete"
             app:layout_column="2"
             app:layout_row="0"

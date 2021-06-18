@@ -23,11 +23,13 @@ class ClientListAdapter : ListAdapter<Client, ClientListAdapter.ClientViewHolder
     class ClientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val nameItemView: TextView = itemView.findViewById(R.id.name)
         private val buttonDetail: ImageButton = itemView.findViewById(R.id.button_client_details)
+        private val buttonDelete: ImageButton = itemView.findViewById(R.id.button_client_delete)
         //private val nameDetailItemView: EditText = itemView.findViewById(R.id.client_detail_name_plain_text)
 
         fun bind(client: Client?) {
             nameItemView.text = client?.firstname + " " + client?.lastname
             buttonDetail.tag = client?.id
+            buttonDelete.tag = client?.id
             //nameDetailItemView.setText(client?.firstname + " " + client?.lastname, TextView.BufferType.EDITABLE)
         }
 

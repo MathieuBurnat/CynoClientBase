@@ -113,8 +113,17 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun clientCreateview(view: View) {
-        val intent = Intent(this, CreateClientActivity::class.java)
+    fun clientCreate(view: View) {
+        val intent = Intent(this, ClientCreateActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun clientDelete(view: View) {
+        val intent = Intent(this, ClientDeleteActivity::class.java).apply {
+            if(view.getId() == R.id.button_client_delete){
+                putExtra("client_id", view.getTag().toString())
+            }
+        }
         startActivity(intent)
     }
 

@@ -17,7 +17,10 @@
             android:name=".ClientInfoActivity"
             android:label="Détails d'un client" />
         <activity
-            android:name=".CreateClientActivity"
+            android:name=".ClientCreateActivity"
+            android:label="Création d'un client" />
+        <activity
+            android:name=".ClientDeleteActivity"
             android:label="Création d'un client" />
         <activity
             android:name=".ReportDetailsActivity"

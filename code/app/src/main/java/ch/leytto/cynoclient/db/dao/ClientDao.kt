@@ -22,8 +22,8 @@ interface ClientDao {
     suspend fun insert(client: Client)
 
     @Update
-    suspend fun updateDogs(vararg clients: Client)
+    suspend fun updateClients(vararg clients: Client)
 
-    @Delete
-    suspend fun deleteDogs(vararg clients: Client)
+    @Query("DELETE FROM clients WHERE id = :id")
+    fun deleteClients(id: String)
 }

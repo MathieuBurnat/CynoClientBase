@@ -29,4 +29,10 @@ class ClientRepository(private val clientDao: ClientDao) : AbstractRepository() 
     fun getById(id: String): ClientWithLocality {
         return clientDao.getById(id)
     }
+    /**
+     * Get all the client data of the given [id] from the dao
+     */
+    fun deleteById(id: String) {
+        return clientDao.deleteClients(id)
+    }
 }
