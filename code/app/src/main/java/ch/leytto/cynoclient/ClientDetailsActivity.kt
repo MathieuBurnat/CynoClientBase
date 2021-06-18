@@ -31,28 +31,28 @@ class ClientDetailsActivity : AppCompatActivity() {
                 title = "Détails de ${clientData.client.firstname} ${clientData.client.lastname}"
 
                 // Firstname
-                findViewById<EditText>(R.id.client_detail_name_plain_text).setText(clientData.client.firstname + " " + clientData.client.lastname)
+                findViewById<EditText>(R.id.client_detail_firstname_plain_text).setText(clientData.client.firstname)
 
                 // Lastname
-                //findViewById<EditText>(R.id.lastname).setText(clientData.client.lastname)
+                findViewById<EditText>(R.id.client_detail_lastname_plain_text).setText(clientData.client.lastname)
 
                 // Email
-                findViewById<EditText>(R.id.email).setText(clientData.client.email ?: "Non précisé")
+                findViewById<EditText>(R.id.client_detail_mail_plain_text).setText(clientData.client.email ?: "Non précisé")
 
                 // Phone
-                findViewById<EditText>(R.id.phone).setText(clientData.client.phone)
+                findViewById<EditText>(R.id.client_detail_phone_plain_text).setText(clientData.client.phone)
 
                 // Street
-                findViewById<EditText>(R.id.street).setText(clientData.client.street ?: "Non précisée")
+                findViewById<EditText>(R.id.client_detail_street_pain_text).setText(clientData.client.street ?: "Non précisée")
 
                 // Locality
-                findViewById<EditText>(R.id.locality).setText(clientData.locality?.noun ?: "Non précisée")
+                findViewById<EditText>(R.id.client_detail_locality_pain_text).setText(clientData.locality?.noun ?: "Non précisée")
 
                 // Gender
                 if (clientData.client.female)
-                    findViewById<EditText>(R.id.gender).setText("Femme")
+                    findViewById<EditText>(R.id.client_detail_radio_female).setText("Femme")
                 else
-                    findViewById<EditText>(R.id.gender).setText("Homme")
+                    findViewById<EditText>(R.id.client_detail_radio_male).setText("Homme")
             }
         }
     }
