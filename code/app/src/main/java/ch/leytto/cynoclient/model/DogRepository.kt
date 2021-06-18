@@ -23,7 +23,7 @@ class DogRepository(private val dogDao: DogDao) : AbstractRepository() {
     /**
      * Get a dog by it's id with his breed
      */
-    suspend fun getById(id: String): DogWithBreed {
+    suspend fun getById(id: String?): DogWithBreed {
         return dogDao.getById(id)
     }
 }

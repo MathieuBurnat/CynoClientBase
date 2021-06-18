@@ -16,8 +16,8 @@ interface DogDao {
     @Query("SELECT * FROM dogs WHERE id = :id")
     suspend fun getDog(id: Int): Dog
 
-    @Query("SELECT * FROM clients WHERE id = :id")
-    suspend fun getById(id: String): DogWithBreed
+    @Query("SELECT * FROM dogs WHERE id = :id")
+    suspend fun getById(id: String?): DogWithBreed
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(dog: Dog)
