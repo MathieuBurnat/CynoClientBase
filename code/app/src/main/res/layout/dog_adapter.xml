@@ -28,12 +28,13 @@
             app:srcCompat="@android:drawable/ic_menu_delete" />
 
         <ImageButton
-            android:id="@+id/dogDetailsButton"
+            android:id="@+id/dog_details_button"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="#00FFFFFF"
             android:onClick="dogDetail"
             android:tint="#0B0B0B"
+            android:tag=""
             app:layout_column="1"
             app:layout_row="0"
             app:srcCompat="@android:drawable/ic_menu_edit" />
