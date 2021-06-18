@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ClientInfoActivity">
+    android:layout_height="match_parent">
 
-    <TextView
+    <EditText
         android:id="@+id/client_detail_lastname_plain_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,7 +14,7 @@
         android:text=""
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_lastname" />
 
@@ -30,16 +29,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_firstname_plain_text" />
 
-    <TextView
+    <EditText
         android:id="@+id/client_detail_locality_pain_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="date"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_locality" />
 
@@ -54,16 +53,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_street_pain_text" />
 
-    <TextView
+    <EditText
         android:id="@+id/client_detail_street_pain_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="date"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_street" />
 
@@ -104,22 +103,20 @@
         android:id="@+id/client_detail_genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="Genre"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_lastname_plain_text"
-        tools:layout_editor_absoluteX="96dp" />
+        tools:layout_editor_absoluteX="101dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/client_detail_firstname_plain_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_firstname" />
 
@@ -156,26 +153,37 @@
             android:text="Femme" />
     </RadioGroup>
 
-    <TextView
+    <EditText
         android:id="@+id/client_detail_phone_plain_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_phone" />
 
-    <TextView
+    <EditText
         android:id="@+id/client_detail_mail_plain_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_email" />
+
+    <Button
+        android:id="@+id/client_detail_save_button"
+        android:layout_width="206dp"
+        android:layout_height="47dp"
+        android:text="Sauvegarder"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/client_detail_locality_pain_text"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/client_detail_locality_pain_text"
+        app:layout_constraintTop_toBottomOf="@+id/client_detail_locality_pain_text"
+        app:layout_constraintVertical_bias="0.132" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

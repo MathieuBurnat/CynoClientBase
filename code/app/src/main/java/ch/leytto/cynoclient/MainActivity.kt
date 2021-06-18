@@ -105,9 +105,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clientDetail(view: View) {
-        val intent = Intent(this, ClientDetailsActivity::class.java)
+        val intent = Intent(this, ClientInfoActivity::class.java).apply {
+            if(view.getId() == R.id.button_client_details){
+            putExtra("client_id", view.getTag().toString())
+            }
+        }
         startActivity(intent)
     }
+
+    fun clientCreateview(view: View) {
+        val intent = Intent(this, CreateClientActivity::class.java)
+        startActivity(intent)
+    }
+
     fun serviceDetail(view: View) {
         val intent = Intent(this, ServiceDetailsActivity::class.java)
         startActivity(intent)
