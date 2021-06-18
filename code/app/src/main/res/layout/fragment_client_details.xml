@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.customer.CustomerFragment">
+    android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/client_detail_email_plaint_text4"
@@ -81,17 +80,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Genre"
-        app:layout_constraintTop_toBottomOf="@+id/dog_detail_name_plain_text"
+        app:layout_constraintTop_toBottomOf="@+id/client_detail_name_plain_text"
         tools:layout_editor_absoluteX="101dp" />
 
     <EditText
-        android:id="@+id/dog_detail_name_plain_text"
+        android:id="@+id/client_detail_name_plain_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=""
         android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@+id/client_detail_name"
         tools:layout_editor_absoluteX="100dp" />
@@ -125,16 +124,16 @@
         tools:layout_editor_absoluteX="100dp">
 
         <RadioButton
-            android:id="@+id/client_detail_radio_femae"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Femme" />
-
-        <RadioButton
             android:id="@+id/client_detail_radio_male"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Homme" />
+
+        <RadioButton
+            android:id="@+id/client_detail_radio_femae"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femme" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
