@@ -4,7 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DogViewModel : ViewModel() {
+    suspend fun insert(dog: Dog){
+        viewModelScope.launch {
+            repository.insert(dog)
+        }
+    }
 
     /**
      * Get a dog by it's id with his breed
