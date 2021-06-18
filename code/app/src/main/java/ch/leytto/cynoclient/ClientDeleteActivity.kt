@@ -18,7 +18,7 @@ class ClientDeleteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_client)
+        setContentView(R.layout.fragment_customer)
 
         val ref = this
         lifecycleScope.launch(Dispatchers.IO) {
