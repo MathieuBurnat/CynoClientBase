@@ -33,7 +33,7 @@ class DogFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        dogViewModel.AllDogs.observe(viewLifecycleOwner) { dogs ->
+        dogViewModel.allDogs.observe(viewLifecycleOwner) { dogs ->
             dogs.let { adapter.submitList(it) }
         }
 
