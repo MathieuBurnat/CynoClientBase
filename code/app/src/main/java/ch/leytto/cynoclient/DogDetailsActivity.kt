@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
 
 class DogDetailsActivity : AppCompatActivity() {
     private val dogViewModel: DogViewModel by viewModels {
-        ViewModelFactory((requireActivity().application as CynoClientApplication).dogRepository)
+        ViewModelFactory((this.application as CynoClientApplication).dogRepository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?){
@@ -27,10 +27,10 @@ class DogDetailsActivity : AppCompatActivity() {
 
         val ref = this
         lifecycleScope.launch(Dispatchers.IO){
-            val dogData = dogViewModel.getById(intent.getStringExtra( "dog_id"))
+            val dogData = dogViewModel.getById(intent.getStringExtra( "dog_id")!!)
 
             ref.runOnUiThread{
-                findViewById<EditText>(R.id.dog_detail_name).text = dogData.dog.noun
+                findViewById<EditText>(R.id.dog_detail_name_plain_text).setText(dogData.dog.noun)
 
                 val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
                 if(dogData.dog.female === true){
@@ -42,9 +42,9 @@ class DogDetailsActivity : AppCompatActivity() {
 
 
 
-                findViewById<EditText>(R.id.dog_detail_date_plaint_text).text = dogData.dog.birthdate
-                findViewById<Switch>(R.id.dog_detail_sterile_switch_button).text = dogData.dog.sterilized
-                findViewById<Switch>(R.id.dog_detail_chimic_switch_button).text = dogData.dog.chemical
+                findViewById<EditText>(R.id.dog_detail_date_plaint_text).setText(dogData.dog.birthdate)
+                findViewById<Switch>(R.id.dog_detail_sterile_switch_button).isChecked = dogData.dog.sterilized
+                findViewById<Switch>(R.id.dog_detail_chimic_switch_button).isChecked = dogData.dog.chemical
 
             }
         }
