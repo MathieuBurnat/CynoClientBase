@@ -7,7 +7,7 @@
     tools:context=".ui.dog.DogFragment">
 
     <TextView
-        android:id="@+id/dog_detail_breed"
+        android:id="@+id/dog_detail_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Croisement"
@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.178" />
 
     <TextView
-        android:id="@+id/dog_detail_color"
+        android:id="@+id/dog_detail_chimic_switch_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
