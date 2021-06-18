@@ -2,9 +2,7 @@ package ch.leytto.cynoclient
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
-import android.widget.LinearLayout
-import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -49,9 +47,9 @@ class ClientInfoActivity : AppCompatActivity() {
 
                 // Gender
                 if (clientData.client.female)
-                    findViewById<RadioButton>(R.id.client_detail_radio_female).is
+                    findViewById<RadioGroup>(R.id.radioGroupSex).check(R.id.client_detail_radio_female)
                 else
-                    findViewById<RadioButton>(R.id.client_detail_radio_male).ischecked
+                    findViewById<RadioGroup>(R.id.radioGroupSex).check(R.id.client_detail_radio_male)
             }
         }
     }
