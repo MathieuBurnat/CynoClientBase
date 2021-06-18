@@ -6,8 +6,10 @@ import androidx.lifecycle.ViewModel
 
 class DogViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dog Fragment"
+    /**
+     * Get a dog by it's id with his breed
+     */
+    suspend fun getById(id: String) : DogWithBreed {
+        return repository.getById(id)
     }
-    val text: LiveData<String> = _text
 }
