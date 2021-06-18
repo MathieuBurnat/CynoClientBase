@@ -3,6 +3,7 @@ package ch.leytto.cynoclient
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.DiffUtil
@@ -25,9 +26,6 @@ class DogListAdapter : ListAdapter<Dog, DogListAdapter.DogViewHolder>(DogsCompar
 
     class DogViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-
-
-
         private val nameItemView: TextView = itemView.findViewById(R.id.name)
         /*private val dogName: TextView = itemView.findViewById(R.id.dogName)
         private val dogDate: TextView = itemView.findViewById(R.id.dogDate)
@@ -36,8 +34,11 @@ class DogListAdapter : ListAdapter<Dog, DogListAdapter.DogViewHolder>(DogsCompar
         //private val nameItemView: TextView = itemView.findViewById(R.id.name) //radio button
         private val dogColor: TextView = itemView.findViewById(R.id.dogColor)*/
 
+        private val buttonDetail: ImageButton = itemView.findViewById(R.id.dog_details_button)
+
         fun bind(dog: Dog?) {
             nameItemView.text = dog?.noun //+ " " + dog?.lastnamey
+            buttonDetail.tag = dog?.id
             /*dogName.text = dog?.noun
             dogDate.text = dog?.birthdate
             dogColor.text = dog?.color*/

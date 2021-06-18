@@ -100,14 +100,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun dogDetail(view: View) {
-        val intent = Intent(this, DogDetailsActivity::class.java)
+        val intent = Intent(this, DogDetailsActivity::class.java).apply {
+            if(view.getId() == R.id.dog_details_button){
+                putExtra("dog_id", view.getTag().toString())
+            }
+        }
         startActivity(intent)
     }
 
     fun clientDetail(view: View) {
         val intent = Intent(this, ClientInfoActivity::class.java).apply {
             if(view.getId() == R.id.button_client_details){
-            putExtra("client_id", view.getTag().toString())
+                putExtra("client_id", view.getTag().toString())
             }
         }
         startActivity(intent)

@@ -7,7 +7,7 @@
     tools:context=".ui.dog.DogFragment">
 
     <TextView
-        android:id="@+id/dog_detail_breed"
+        android:id="@+id/dog_detail_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Croisement"
@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.178" />
 
     <TextView
-        android:id="@+id/dog_detail_color"
+        android:id="@+id/dog_detail_chimic_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -64,6 +64,7 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="date"
+        android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@+id/dog_detail_birthday"
         tools:layout_editor_absoluteX="100dp" />
 
@@ -93,6 +94,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
+        android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@+id/dog_detail_name"
         tools:layout_editor_absoluteX="100dp" />
 

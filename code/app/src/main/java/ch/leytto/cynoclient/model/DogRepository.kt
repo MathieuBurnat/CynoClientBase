@@ -3,6 +3,7 @@ package ch.leytto.cynoclient.model
 import androidx.annotation.WorkerThread
 import ch.leytto.cynoclient.db.dao.DogDao
 import ch.leytto.cynoclient.db.entities.Dog
+import ch.leytto.cynoclient.db.entities.relations.DogWithBreed
 import kotlinx.coroutines.flow.Flow
 
 class DogRepository(private val dogDao: DogDao) : AbstractRepository() {
@@ -18,5 +19,11 @@ class DogRepository(private val dogDao: DogDao) : AbstractRepository() {
     @WorkerThread
     suspend fun insert(dog: Dog) {
         dogDao.insert(dog)
+    }
+    /**
+     * Get a dog by it's id with his breed
+     */
+    suspend fun getById(id: String?): DogWithBreed {
+        return dogDao.getById(id)
     }
 }
