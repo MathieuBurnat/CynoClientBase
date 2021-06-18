@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/ic_report"
+            android:title="@string/menu_reports" />
+        <item
+            android:id="@+id/nav_customers"
+            android:icon="@drawable/ic_people"
+            android:title="@string/menu_customers" />
+        <item
+            android:id="@+id/nav_dogs"
+            android:icon="@drawable/ic_pets"
+            android:title="@string/menu_dogs" />
+        <item
+            android:title="@string/menu_settings" >
+            <menu>
+                <item
+                    android:id="@+id/nav_localities"
+                    android:icon="@drawable/ic_map"
+                    android:title="@string/menu_localities" />
+                <item
+                    android:id="@+id/nav_services"
+                    android:icon="@drawable/ic_service"
+                    android:title="@string/menu_services" />
+            </menu>
+        </item>
+    </group>
+</menu>

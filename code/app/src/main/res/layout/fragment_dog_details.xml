@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dog.DogFragment">
+
+    <TextView
+        android:id="@+id/dog_detail_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Croisement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_color"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <TextView
+        android:id="@+id/dog_detail_breed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Race"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_color"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <TextView
+        android:id="@+id/dog_detail_chimic_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Couleur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_chimic_switch_button" />
+
+    <Switch
+        android:id="@+id/dog_detail_chimic_switch_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Si oui, était-ce chimicalement"
+        app:layout_constraintEnd_toEndOf="@+id/dog_detail_date_plaint_text"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_sterile_switch_button" />
+
+    <Switch
+        android:id="@+id/dog_detail_sterile_switch_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Est il stérile"
+        app:layout_constraintEnd_toEndOf="@+id/dog_detail_date_plaint_text"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_date_plaint_text" />
+
+    <EditText
+        android:id="@+id/dog_detail_date_plaint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_birthday"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <TextView
+        android:id="@+id/dog_detail_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Date de naissance"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:layout_editor_absoluteX="102dp" />
+
+    <TextView
+        android:id="@+id/dog_detail_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Genre"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_name_plain_text"
+        tools:layout_editor_absoluteX="101dp" />
+
+    <EditText
+        android:id="@+id/dog_detail_name_plain_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_name"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <TextView
+        android:id="@+id/dog_detail_name"
+        android:layout_width="69dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="28dp"
+        android:text="Nom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="217dp"
+        android:layout_height="91dp"
+        app:layout_constraintTop_toBottomOf="@+id/dog_detail_genre"
+        tools:layout_editor_absoluteX="108dp">
+
+        <RadioButton
+            android:id="@+id/dog_detail_radio_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mâle" />
+
+        <RadioButton
+            android:id="@+id/dog_detail_radio_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femelle" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

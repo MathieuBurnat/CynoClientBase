@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ch.leytto.cynoclient.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_reports"
+        android:name="ch.leytto.cynoclient.ui.report.ReportFragment"
+        android:label="@string/menu_reports"
+        tools:layout="@layout/fragment_report" />
+
+    <fragment
+        android:id="@+id/nav_customers"
+        android:name="ch.leytto.cynoclient.ui.customer.CustomerFragment"
+        android:label="@string/menu_customers"
+        tools:layout="@layout/fragment_customer" />
+
+    <fragment
+        android:id="@+id/nav_dogs"
+        android:name="ch.leytto.cynoclient.ui.dog.DogFragment"
+        android:label="@string/menu_dogs"
+        tools:layout="@layout/fragment_dog" />
+
+    <fragment
+        android:id="@+id/nav_localities"
+        android:name="ch.leytto.cynoclient.ui.locality.LocalityFragment"
+        android:label="@string/menu_localities"
+        tools:layout="@layout/fragment_locality" />
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="ch.leytto.cynoclient.ui.service.ServiceFragment"
+        android:label="@string/menu_services"
+        tools:layout="@layout/fragment_service" />
+
+
+</navigation>
